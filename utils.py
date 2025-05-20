@@ -13,7 +13,8 @@ def multiply(a: int, b: int) -> int:
     return a * b
 
 def divide(a: int, b: int) -> float:
-    """Return the result of dividing a by b."""
+    if b == 0:
+        raise ValueError("Division by zero is undefined.")
     return a / b
 
 def word_count(text: str) -> int:

@@ -40,9 +40,9 @@ def test_divide(a, b, expected):
     result = utils.divide(a, b)
     assert result == pytest.approx(expected)
 
-#def test_divide_by_zero():
-   # with pytest.raises(ValueError):
-    #    utils.divide(1, 0)
+def test_divide_by_zero():
+    with pytest.raises(ValueError):
+        utils.divide(1, 0)
 
 @pytest.mark.parametrize("text, expected", [
     ("Hello world", 2),
