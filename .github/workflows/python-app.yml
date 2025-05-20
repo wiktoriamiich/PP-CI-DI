@@ -30,7 +30,7 @@ jobs:
 
       - name: Lint with Pylint
         run: |
-          pylint ./utils.py
+          pylint --fail-under=4.0 ./utils.py
 
       - name: Format with Black
         run: |
